@@ -107,4 +107,7 @@ Thumbs.db
 .env
 
 .claude
+*.claude
 .vscode
+*.vscode
+outputs/

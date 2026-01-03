@@ -1,18 +1,21 @@
 
 from dataclasses import dataclass, field
-from typing import Dict, List
-import hashlib, json
+from typing import Any, Optional
+from pathlib import Path
+import hashlib
+import json
+
 
 @dataclass
 class Node:
     id: str
     type: str
-    params: Dict
-    inputs: List["Node"] = field(default_factory=list)
-    hash: str = None
-    output_path: str = None
+    params: dict[str, Any]
+    inputs: list["Node"] = field(default_factory=list)
+    hash: Optional[str] = None
+    output_path: Optional[Path] = None
 
-    def compute_hash(self, tool_version="v1"):
+    def compute_hash(self, tool_version: str = "v1") -> None:
         payload = {
             "type": self.type,
             "params": self.params,

@@ -2,13 +2,16 @@
 from pathlib import Path
 import subprocess
 
-def render(video: Path, audio: Path, output: Path):
+
+def render(video: Path, audio: Path, output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
+
     subprocess.run([
         "ffmpeg", "-y",
         "-i", str(video),
         "-i", str(audio),
         "-c:v", "copy",
         "-c:a", "aac",
+        "-shortest",
         str(output)
     ], check=True)

@@ -1,0 +1,19 @@
+title: multi_shot_story
+scenes:
+  - id: scene1
+    background: "sunrise over a mountain landscape"
+    shots:
+      - id: shot1
+        duration: 3
+        camera: "wide establishing shot"
+        dialogue: "Every journey begins with a single step."
+
+      - id: shot2
+        duration: 3
+        camera: "slow zoom to peak"
+        dialogue: "The peak calls to those brave enough to answer."
+
+      - id: shot3
+        duration: 4
+        camera: "close-up of determined face"
+        dialogue: "This is my moment. This is my time."
