@@ -1,0 +1,10 @@
+
+title: storyos_demo
+scenes:
+  - id: scene1
+    background: sunrise farm
+    shots:
+      - id: shot1
+        duration: 4
+        camera: slow zoom
+        dialogue: "This is the future of farming."
